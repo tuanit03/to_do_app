@@ -37,11 +37,5 @@ To-Do App được thiết kế với kiến trúc serverless trên nền tảng
 - **Thông báo và lập lịch**:
   - **Amazon EventBridge**: Lập lịch chạy `send_task_reminder` mỗi giờ một lần để kiểm tra các task sắp đến hạn.
   - **AWS SES**: Gửi email thông báo nhắc nhở đến người dùng về các task sắp đến hạn.
-    
-![aws_diagram](https://github.com/user-attachments/assets/5e05700d-4a53-45e3-8033-9b8d246170c4)
-
-4. **Gửi thông báo nhắc nhở**:
-   - **EventBridge** tự động kích hoạt `send_task_reminder_lambda` mỗi giờ.
-   - Hàm Lambda kiểm tra các task sắp đến hạn trong **DynamoDB** và gửi email nhắc nhở đến người dùng thông qua **AWS SES**.
-
+![image](https://github.com/user-attachments/assets/83dae68d-ddde-422c-ae77-7da9709542f4)
 ---
