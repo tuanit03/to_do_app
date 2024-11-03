@@ -21,7 +21,7 @@ pre : " <b> 4. </b> "
 1. Truy cập **AWS Console** và mở **AWS Lambda**.
 2. Nhấn **Create function** để tạo một hàm Lambda mới.
 3. **Thiết lập hàm Lambda**:
-   - **Function name**: Đặt tên cho hàm (ví dụ: `register_user`, `login_user`, `add_task`, `delete_task`, `send_task_reminder`).
+   - **Function name**: Đặt tên cho hàm (ví dụ: `register_user`, `login_user`, `add_delete_tasks`).
    - **Runtime**: Chọn ngôn ngữ lập trình (ví dụ: `Python 3.8`, `Node.js 14.x`).
    - **Permissions**: Chọn **Create a new role with basic Lambda permissions** hoặc chọn IAM role có quyền truy cập DynamoDB và SES nếu đã có.
 
