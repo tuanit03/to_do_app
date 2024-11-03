@@ -35,9 +35,8 @@ pre : " <b> 3. </b> "
 
 **Bước 2:** Cấu hình các thuộc tính và chỉ mục bổ sung
 
-1. Chọn Create item, copy file json này :
+Chọn **Create item**, vào tab **JSON View** dán file json này :
 
-  
 ```
 {
   "email": {
