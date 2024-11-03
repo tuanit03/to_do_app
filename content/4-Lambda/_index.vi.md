@@ -37,8 +37,10 @@ pre : " <b> 4. </b> "
 
 2. Ví dụ, dưới đây là mã Python cho từng chức năng:
 
-   - **register_user**: Lưu thông tin người dùng mới vào DynamoDB.
-     ```
+
+- **register_user**: Lưu thông tin người dùng mới vào DynamoDB.
+     
+```
 import json
 import boto3
 from botocore.exceptions import ClientError
@@ -88,10 +90,10 @@ def lambda_handler(event, context):
             'body': f"Error accessing DynamoDB: {e.response['Error']['Message']}"
         }
 
-     ```
+```
 
    - **login_user**: Lấy danh sách task của người dùng từ DynamoDB.
-     ```
+```
 import json
 import boto3
 from botocore.exceptions import ClientError
@@ -133,10 +135,10 @@ def lambda_handler(event, context):
             'body': f"Error accessing DynamoDB: {e.response['Error']['Message']}"
         }
 
-     ```
+```
 
    - **add_delete_tasks**: Thêm task mới hoặc xóa task từ bảng DynamoDB.
-     ```
+```
 import json
 import boto3
 from botocore.exceptions import ClientError
@@ -269,10 +271,10 @@ def lambda_handler(event, context):
             'body': "Invalid API type. Use 'add' to add a task or 'del' to delete a task."
         }
 
-     ```
+ ```
 
    - **send_task_reminder**: Gửi email nhắc nhở các task sắp đến hạn.
-     ```
+```
 import boto3
 from datetime import datetime, timezone, timedelta
 
@@ -324,7 +326,7 @@ def send_email(email, due_date, description):
         }
     )
 
-     ```
+```
 
 ---
 
