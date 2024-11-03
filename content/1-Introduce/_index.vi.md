@@ -6,18 +6,17 @@ chapter : false
 pre : " <b> 1. </b> "
 ---
 
-## Giới thiệu
 
 To-Do App là một ứng dụng quản lý công việc cá nhân được xây dựng trên nền tảng AWS. Ứng dụng cung cấp các chức năng cơ bản như đăng ký, đăng nhập, thêm, xóa, và quản lý các task. Bên cạnh đó, người dùng sẽ nhận được thông báo qua email nhắc nhở về các công việc sắp đến hạn. Ứng dụng sử dụng các dịch vụ của AWS để triển khai toàn bộ quy trình, từ xác thực người dùng, lưu trữ dữ liệu cho đến việc gửi thông báo email.
 
-## Chức năng chính
+### Chức năng chính
 
 - **Đăng ký và đăng nhập người dùng**: Quản lý xác thực và phân quyền người dùng thông qua **AWS Cognito**.
 - **Thêm và xóa task**: Lưu trữ và quản lý các task của người dùng bằng **AWS DynamoDB**.
 - **Thông báo nhắc nhở**: Gửi email nhắc nhở người dùng về các công việc sắp đến hạn thông qua **AWS Simple Email Service (SES)**.
 - **Lập lịch tự động**: Kiểm tra các task sắp đến hạn và tự động gửi thông báo mỗi giờ nhờ **Amazon EventBridge** và **AWS Lambda**.
 
-## Kiến trúc hệ thống
+### Kiến trúc hệ thống
 
 To-Do App được thiết kế với kiến trúc serverless trên nền tảng AWS, với các thành phần chính như sau:
 
