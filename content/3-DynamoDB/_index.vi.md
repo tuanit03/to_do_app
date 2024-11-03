@@ -38,7 +38,7 @@ pre : " <b> 3. </b> "
 1. Chọn Create item, copy file json này :
 
   
-   ```
+```
 {
   "email": {
     "S": "tuan@gmail.com"
@@ -113,5 +113,5 @@ pre : " <b> 3. </b> "
   }
 }
 
-   ```
+```
 
