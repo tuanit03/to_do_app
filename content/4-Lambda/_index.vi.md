@@ -8,15 +8,15 @@ pre : " <b> 4. </b> "
 
 
 
-## 1. Giới thiệu về AWS Lambda
+### 1. Giới thiệu về AWS Lambda
 
 **AWS Lambda** là dịch vụ điện toán không máy chủ, cho phép chạy code mà không cần quản lý máy chủ. Với Lambda, bạn chỉ cần cung cấp mã nguồn, và Lambda sẽ tự động mở rộng và thực thi code theo nhu cầu. Điều này rất hữu ích cho các tác vụ ngắn, có thể thực thi nhanh chóng, như xác thực người dùng hoặc thao tác cơ sở dữ liệu.
 
 ---
 
-## 2. Hướng dẫn triển khai Lambda cho các tính năng của To-Do App
+### 2. Hướng dẫn triển khai Lambda cho các tính năng của To-Do App
 
-### Bước 1: Tạo Lambda Function
+**Bước 1:** Tạo Lambda Function
 
 1. Truy cập **AWS Console** và mở **AWS Lambda**.
 2. Nhấn **Create function** để tạo một hàm Lambda mới.
@@ -31,7 +31,7 @@ pre : " <b> 4. </b> "
 
 ---
 
-### Bước 2: Tạo đoạn mã cho các Lambda Function
+**Bước 2:** Tạo đoạn mã cho các Lambda Function
 
 1. Trong phần **Code** của Lambda, thêm mã nguồn để thực hiện chức năng tương ứng.
 
@@ -330,7 +330,7 @@ def send_email(email, due_date, description):
 
 ---
 
-### Bước 3: Cấu hình API Gateway để gọi Lambda Functions
+**Bước 3:** Cấu hình API Gateway để gọi Lambda Functions
 
 1. **Truy cập AWS API Gateway** và tạo API mới hoặc cấu hình API hiện có.
 2. Thiết lập **HTTP Methods** (POST, GET, DELETE) cho các endpoint và kết nối với các Lambda function đã tạo.
@@ -338,7 +338,7 @@ def send_email(email, due_date, description):
 
 ---
 
-### Bước 4: Tạo Trigger cho Lambda với EventBridge (Đối với Email nhắc nhở)
+**Bước 4:** Tạo Trigger cho Lambda với EventBridge (Đối với Email nhắc nhở)
 
 1. Truy cập **Amazon EventBridge** và chọn **Create rule** để tạo một trigger.
 2. Đặt **Rule name** và chọn **Event Source** là `EventBridge Scheduler`.
