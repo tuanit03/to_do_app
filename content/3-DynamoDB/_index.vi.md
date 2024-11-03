@@ -7,15 +7,15 @@ pre : " <b> 3. </b> "
 ---
 
 
-## 1. Giới thiệu về Amazon DynamoDB
+### 1. Giới thiệu về Amazon DynamoDB
 
 **Amazon DynamoDB** là dịch vụ cơ sở dữ liệu NoSQL được quản lý bởi AWS, cung cấp hiệu năng cao, khả năng mở rộng linh hoạt và độ trễ thấp. DynamoDB lý tưởng cho các ứng dụng cần lưu trữ lượng lớn dữ liệu và có khả năng truy xuất nhanh chóng, như các ứng dụng thời gian thực, ứng dụng di động, hoặc ứng dụng có yêu cầu truy cập dữ liệu liên tục như To-Do App của bạn.
 
 ---
 
-## 2. Hướng dẫn triển khai
+### 2. Hướng dẫn triển khai
 
-### Bước 1: Tạo bảng DynamoDB cho To-Do App
+**Bước 1:** Tạo bảng DynamoDB cho To-Do App
 
 1. **Truy cập AWS Console** và mở **Amazon DynamoDB**.
 2. Chọn **Create Table** để tạo bảng mới.
@@ -33,7 +33,7 @@ pre : " <b> 3. </b> "
 ![Screenshot 2024-10-31 152701](https://github.com/user-attachments/assets/5a1dcd9d-6835-44e9-a92e-7f8c527c69e5)
 
 
-### Bước 2: Cấu hình các thuộc tính và chỉ mục bổ sung
+**Bước 2:** Cấu hình các thuộc tính và chỉ mục bổ sung
 
 1. Chọn Create item, copy file json này :
 
