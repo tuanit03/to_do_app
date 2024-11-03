@@ -7,17 +7,16 @@ pre : " <b> 5. </b> "
 ---
 
 
-# Giới thiệu API Gateway và Hướng dẫn triển khai
 
-## 1. Giới thiệu về Amazon API Gateway
+### 1. Giới thiệu về Amazon API Gateway
 
 **Amazon API Gateway** là một dịch vụ quản lý API cho phép bạn dễ dàng tạo, xuất bản, duy trì, giám sát và bảo mật các API RESTful và WebSocket. Trong dự án này, API Gateway sẽ là cầu nối trung gian, chuyển các request từ client đến các Lambda function để xử lý logic của ứng dụng.
 
 ---
 
-## 2. Hướng dẫn triển khai API Gateway
+### 2. Hướng dẫn triển khai API Gateway
 
-### Bước 1: Tạo API mới
+**Bước 1:** Tạo API mới
 
 1. Truy cập **API Gateway** trong **AWS Console**.
 2. Nhấn **Create API**.
@@ -31,36 +30,35 @@ pre : " <b> 5. </b> "
 
 ---
 
-### Bước 2: Tạo Resource và Method cho các Endpoint
+**Bước 2:** Tạo Resource và Method cho các Endpoint
 
-API sẽ có các endpoint để xử lý đăng ký, đăng nhập, quản lý task và nhắc nhở.
+- API sẽ có các endpoint để xử lý đăng ký, đăng nhập, thêm xóa task.
+  1. Tạo Resource cho các Endpoint
+  
+  1. Trong API vừa tạo, chọn **Actions** > **Create Resource**.
+  2. **Resource Name**: Đặt tên cho resource (ví dụ: `to_do_app`).
+  3. Nhấn **Create Resource**.
 
-#### 2.1 Tạo Resource cho các Endpoint
+- Tạo Method cho Resource `to_do_app`
 
-1. Trong API vừa tạo, chọn **Actions** > **Create Resource**.
-2. **Resource Name**: Đặt tên cho resource (ví dụ: `to_do_app`).
-3. Nhấn **Create Resource**.
-
-#### 2.2 Tạo Method cho Resource `to_do_app`
-
-1. Chọn resource đã tạo và nhấn **Create Method**.
-2. Chọn **POST method** đối với api đăng ký và **GET method** đối với api đăng nhập
-3. Nhập tên **Lambda Function** tương ứng (ví dụ: `register_user`, `login_user`).
-4. Nhấn **Save** và xác nhận quyền cho API Gateway gọi Lambda.
+  1. Chọn resource đã tạo và nhấn **Create Method**.
+  2. Chọn **POST method** đối với api đăng ký và **GET method** đối với api đăng nhập
+  3. Nhập tên **Lambda Function** tương ứng (ví dụ: `register_user`, `login_user`).
+  4. Nhấn **Save** và xác nhận quyền cho API Gateway gọi Lambda.
 
 
-#### 2.3 Tạo api cho lambda function `add_delete_tasks`
+- Tạo api cho lambda function `add_delete_tasks`
 
-1. Chọn resource đã tạo và nhấn **Create Resource**.
-2. Nhập **{type}** ở Resource name và chọn Create Resource
-3. Chọn **POST method** và chọn lambda function `add_delete_tasks`
-4. Nhấn **Save** và xác nhận quyền cho API Gateway gọi Lambda.
+  1. Chọn resource đã tạo và nhấn **Create Resource**.
+  2. Nhập **{type}** ở Resource name và chọn Create Resource
+  3. Chọn **POST method** và chọn lambda function `add_delete_tasks`
+  4. Nhấn **Save** và xác nhận quyền cho API Gateway gọi Lambda.
 
    ![image](https://github.com/user-attachments/assets/dd5dabe5-ce01-41ad-9da4-9b094553bc6d)
 
 ---
 
-### Bước 3: Cấu hình CORS cho API Gateway
+**Bước 3:** Cấu hình CORS cho API Gateway
 
 1. Chọn từng Resource cần hỗ trợ CORS (như `to_do_app`, `{type}`).
 2. Chọn **Actions** > **Enable CORS**.
@@ -72,7 +70,7 @@ API sẽ có các endpoint để xử lý đăng ký, đăng nhập, quản lý 
 ---
 
 
-### Bước 4: Triển khai API
+**Bước 4:** Triển khai API
 
 1. Chọn **Actions** > **Deploy API**.
 2. **Deployment Stage**: Nhấn **[New Stage]** và điền tên (ví dụ: `prod`).
@@ -84,7 +82,7 @@ Sau khi triển khai, API Gateway sẽ tạo một URL endpoint cho mỗi resour
 
 ---
 
-### Bước 6: Kiểm tra API Endpoint
+**Bước 5:** Kiểm tra API Endpoint
 
 1. Sau khi triển khai, truy cập **Invoke URL** để kiểm tra từng endpoint (POST /register, GET /login, POST /add_delete_tasks).
 2. Sử dụng **Postman** hoặc **cURL** để gửi request và kiểm tra xem Lambda function có phản hồi chính xác không.
